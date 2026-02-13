@@ -1,4 +1,4 @@
-const chalk = require('chalk');
+import chalk from 'chalk';
 
 /**
  * Report Formatter - Formats structured data with color coding.
@@ -41,7 +41,7 @@ function formatStatus(status) {
     case 'fail':
       return chalk.red.bold('FAIL');
     case 'warn':
-      return chalk.keyword('orange')('WARN');
+      return chalk.hex('orange')('WARN');
     case 'skip':
       return chalk.gray('SKIP');
     default:
@@ -70,8 +70,13 @@ function formatDuration(ms) {
   }
 }
 
-module.exports = {
+export { 
   formatTable,
   formatStatus,
   formatDuration,
-};
+ };
+export default { 
+  formatTable,
+  formatStatus,
+  formatDuration,
+ };

@@ -1,7 +1,11 @@
-const logger = require('./logger');
-const reporter = require('./reporter');
+import logger from './logger.js';
+import reporter from './reporter.js';
 
-module.exports = {
+export { 
   ...logger,
   reporter,
-};
+ };
+export default { 
+  ...logger,
+  reporter,
+ };
