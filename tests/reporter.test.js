@@ -1,5 +1,5 @@
-const chalk = require('chalk');
-const reporter = require('../src/reporter');
+import chalk from 'chalk';
+import reporter from '../src/reporter.js';
 
 // Disable color output so we can test plain text content
 chalk.level = 0;

@@ -1,5 +1,6 @@
-const chalk = require('chalk');
-const logger = require('../src/logger');
+import { jest, expect, describe, it, beforeEach, afterEach } from '@jest/globals';
+import chalk from 'chalk';
+import logger from '../src/logger.js';
 
 // Disable color output so we can test plain text content
 chalk.level = 0;

@@ -1,4 +1,4 @@
-const chalk = require('chalk');
+import chalk from 'chalk';
 
 /**
  * Pretty Logger - Colorful logging utility for CLI applications
@@ -53,20 +53,27 @@ function error(msg) {
 
 /**
  * Log a highlighted message in orange.
- * Uses chalk.keyword('orange') which was removed in chalk 5.
+ * Uses chalk.hex('orange') which was removed in chalk 5.
  * @param {string} msg - The message to log
  * @returns {string} The formatted string
  */
 function highlight(msg) {
-  const formatted = chalk.keyword('orange')(`[HIGHLIGHT] ${msg}`);
+  const formatted = chalk.hex('orange')(`[HIGHLIGHT] ${msg}`);
   console.log(formatted);
   return formatted;
 }
 
-module.exports = {
+export { 
   info,
   success,
   warn,
   error,
   highlight,
-};
+ };
+export default { 
+  info,
+  success,
+  warn,
+  error,
+  highlight,
+ };
